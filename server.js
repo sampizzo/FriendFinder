@@ -14,14 +14,12 @@ app.use(express.json());
 // ROUTER
 require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
-//2 html routes: survey and home
-//404 route for any other user input
 
 //api res.json()
 //api post new user route
 
 // LISTENER
-// The below code effectively "starts" our server
+// Start the server
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });
