@@ -12,7 +12,7 @@ module.exports = function(app) {
     // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
     // ---------------------------------------------------------------------------
   
-    app.get("/api/tables", function(req, res) {
+    app.get("/api/", function(req, res) {
       res.json(tableData);
     });
   
