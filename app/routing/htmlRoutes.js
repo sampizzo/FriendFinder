@@ -1,11 +1,8 @@
-// Use math.abs() to capture the absolute value of the differences to avoid any negative values
-
 // ===============================================================================
 // DEPENDENCIES
 // We need to include the path package to get the correct file path for our html
 // ===============================================================================
 var path = require("path");
-
 
 // ===============================================================================
 // ROUTING
