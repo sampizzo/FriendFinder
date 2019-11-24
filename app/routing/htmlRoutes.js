@@ -25,8 +25,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
   });
   
-  // If no matching route is found default to 404
+  // Catch-all route to home page
   app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/404.html"));
+    res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 };

@@ -15,9 +15,6 @@ app.use(express.json());
 require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
 
-//api res.json()
-//api post new user route
-
 // LISTENER
 // Start the server
 app.listen(PORT, function() {
