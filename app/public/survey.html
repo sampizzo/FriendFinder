@@ -144,8 +144,40 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <button type="button" class="btn" id="submitBtn" data-toggle="modal" data-target="#userMatch">
+                SUBMIT
+            </button>
         </form>
     </div>
+    <script>
+    $("#submitBtn").on("click", function (event) {
+        event.preventDefault();
+        if ($("#userName").val() === "" || $("#userPhoto").val() === "" || $("#question01").val() === "" || $("#question02").val() === "" || $("#question03").val() === "" || $("#question04").val() === "" || $("#question05").val() === "" || $("#question06").val() === "" || $("#question07").val() === "" || $("#question08").val() === "" || $("#question09").val() === "" || $("#question10").val() === "") {
+            return alert("Please complete all fields.")
+        } else {
+            var userData = {
+                name: $("#userName").val().trim(),
+                photo: $("#userPhoto").val(),
+                scoresArray: [
+                    $("#question01").val(),
+                    $("#question02").val(),
+                    $("#question03").val(),
+                    $("#question04").val(),
+                    $("#question05").val(),
+                    $("#question06").val(),
+                    $("#question07").val(),
+                    $("#question08").val(),
+                    $("#question09").val(),
+                    $("#question10").val(),
+                ]
+            };
+        
+        $.post("./api/friends", userData, function(data) {
+                $("#userMatch").html("<img class='img-fluid' src='" + data.photo + "'><h3>" + data.name + "</h3>");
+            })
+    }
+});
+        </script>
 </body>
 
 </html>
