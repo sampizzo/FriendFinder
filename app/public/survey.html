@@ -16,17 +16,19 @@
 <body>
     <div class="container">
         <h2>Survey Questions</h2>
+        <hr />
         <form>
             <h4>Name (Required)</h4>
             <input type="text" name="" id="userName" class="form-control" required>
-
+            <hr />
             <h4>Link to Photo Image (Required)</h4>
             <input type="text" name="" id="userPhoto" class="form-control" required>
+            <hr />
             <div class="form-group">
                 <h5>Question 1</h5>
                 <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
                 <select class="form-control" id="question01">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -34,11 +36,12 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <div class="form-group">
                 <h5>Question 2</h5>
                 <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
                 <select class="form-control" id="question02">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -46,11 +49,12 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <div class="form-group">
                 <h5>Question 3</h5>
                 <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
                 <select class="form-control" id="question03">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -58,11 +62,12 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <div class="form-group">
                 <h5>Question 4</h5>
                 <h5>You rarely do something just out of sheer curiosity.</h5>
                 <select class="form-control" id="question04">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -70,11 +75,12 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <div class="form-group">
                 <h5>Question 5</h5>
                 <h5>People can rarely upset you.</h5>
                 <select class="form-control" id="question05">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -82,11 +88,12 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <div class="form-group">
                 <h5>Question 6</h5>
                 <h5>It is often difficult for you to relate to other people’s feelings.</h5>
                 <select class="form-control" id="question06">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -94,11 +101,12 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <div class="form-group">
                 <h5>Question 7</h5>
                 <h5>In a discussion, truth should be more important than people’s sensitivities.</h5>
                 <select class="form-control" id="question07">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -106,11 +114,12 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <div class="form-group">
                 <h5>Question 8</h5>
                 <h5>You rarely get carried away by fantasies and ideas.</h5>
                 <select class="form-control" id="question08">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -118,13 +127,14 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <div class="form-group">
                 <h5>Question 9</h5>
                 <h5>You think that everyone’s views should be respected regardless of whether they are supported by
                     facts or
                     not.</h5>
                 <select class="form-control" id="question09">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -132,11 +142,12 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <div class="form-group">
                 <h5>Question 10</h5>
                 <h5>You feel more energetic after spending time with a group of people.</h5>
                 <select class="form-control" id="question10">
-                    <option>""</option>
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -144,41 +155,68 @@
                     <option>5 (Strongly Agree)</option>
                 </select>
             </div>
+            <hr />
             <button type="button" class="btn btn-primary" id="submitBtn" data-toggle="modal" data-target="#userMatch">
                 SUBMIT
             </button>
+
+            <div id="userMatch" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">
+                                <strong>You have a match!</strong>
+                            </h2>
+                        </div>
+                        <div class="modal-body">
+                            <div id="userMatchData"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
+        <br>
         <br>
     </div>
     <script>
-    $("#submitBtn").on("click", function (event) {
-        event.preventDefault();
-        if ($("#userName").val() === "" || $("#userPhoto").val() === "" || $("#question01").val() === "" || $("#question02").val() === "" || $("#question03").val() === "" || $("#question04").val() === "" || $("#question05").val() === "" || $("#question06").val() === "" || $("#question07").val() === "" || $("#question08").val() === "" || $("#question09").val() === "" || $("#question10").val() === "") {
-            return alert("Please complete all fields.")
-        } else {
-            var userData = {
-                name: $("#userName").val().trim(),
-                photo: $("#userPhoto").val(),
-                scoresArray: [
-                    $("#question01").val(),
-                    $("#question02").val(),
-                    $("#question03").val(),
-                    $("#question04").val(),
-                    $("#question05").val(),
-                    $("#question06").val(),
-                    $("#question07").val(),
-                    $("#question08").val(),
-                    $("#question09").val(),
-                    $("#question10").val(),
-                ]
-            };
-        
-        $.post("./api/friends", userData, function(data) {
-                $("#userMatch").html("<img class='img-fluid' src='" + data.photo + "'><h3>" + data.name + "</h3>");
-            })
-    }
-});
-        </script>
+        $("#submitBtn").on("click", function (event) {
+            event.preventDefault();
+            if ($("#userName").val() === "" || $("#userPhoto").val() === "" || $("#question01").val() === "" ||
+                $("#question02").val() === "" || $("#question03").val() === "" || $("#question04").val() ===
+                "" || $("#question05").val() === "" || $("#question06").val() === "" || $("#question07")
+                .val() === "" || $("#question08").val() === "" || $("#question09").val() === "" || $(
+                    "#question10")
+                .val() === "") {
+                return alert("Please complete all fields.")
+            } else {
+                var userData = {
+                    name: $("#userName").val().trim(),
+                    photo: $("#userPhoto").val(),
+                    scoresArray: [
+                        parseInt($("#question01").val()),
+                        parseInt($("#question02").val()),
+                        parseInt($("#question03").val()),
+                        parseInt($("#question04").val()),
+                        parseInt($("#question05").val()),
+                        parseInt($("#question06").val()),
+                        parseInt($("#question07").val()),
+                        parseInt($("#question08").val()),
+                        parseInt($("#question09").val()),
+                        parseInt($("#question10").val()),
+                    ]
+                };
+
+                $.post("./api/friends", userData, function (data) {
+                    $("#userMatchData").html("<img src='" + data.photo + "'><h3>" + data.name +
+                    "</h3>");
+                })
+            }
+        });
+    </script>
 </body>
 
 </html>
