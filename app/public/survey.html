@@ -156,7 +156,7 @@
                 </select>
             </div>
             <hr />
-            <button type="button" class="btn btn-primary" id="submitBtn" data-toggle="modal" data-target="#userMatch">
+            <button type="button" class="btn btn-primary" id="submitBtn">
                 SUBMIT
             </button>
 
@@ -195,7 +195,7 @@
                 var userData = {
                     name: $("#userName").val().trim(),
                     photo: $("#userPhoto").val(),
-                    scoresArray: [
+                    scores: [
                         parseInt($("#question01").val()),
                         parseInt($("#question02").val()),
                         parseInt($("#question03").val()),
@@ -208,10 +208,11 @@
                         parseInt($("#question10").val()),
                     ]
                 };
+                console.log(userData);
 
                 $.post("./api/friends", userData, function (data) {
-                    $("#userMatchData").html("<img src='" + data.photo + "'><h3>" + data.name +
-                    "</h3>");
+                    $("#userMatchData").html("<img src='" + data.photo + "' class='img-fluid'><h3>" + data.name + "</h3>");
+                    $("#userMatch").modal("show");
                 })
             }
         });

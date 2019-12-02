@@ -15,18 +15,21 @@ module.exports = function(app) {
         var difference = "";
         var userMatchName = "";
         var userMatchPhoto = "";
-        var userScore = req.body.scoresArray;
+        var userScore = req.body.scores;
     
         for (var i = 0; i < friends.length; i++) {
           var sum = 0;
           for (var j = 0; j < userScore.length; j++) {
-            sum += Math.abs(userScore[j] - friends[i].scores[j]);
+            sum += Math.abs(friends[i].scores[j] - userScore[j]);
           }
+          console.log(sum + " is the total difference for " + friends[i].name);
           if (difference === "") {
             userMatchName = friends[i].name;
             userMatchPhoto = friends[i].photo;
             difference = sum;
+            console.log(friends[i].name + " is the first friend.");
           } else if (sum < difference) {
+            console.log(sum + " is less than " + difference);
             userMatchName = friends[i].name;
             userMatchPhoto = friends[i].photo;
             difference = sum;
